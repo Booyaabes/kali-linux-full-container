@@ -1,1 +1,3 @@
-# kali-linux-full-container
+# kali-linux-full image
+
+Kali image with kali-linux-full metapackage installed
