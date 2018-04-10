@@ -1,6 +1,6 @@
 FROM kalilinux/kali-linux-docker
 
-MAINTAINER Booyaabes
+LABEL maintainer="Booyaabes"
 
 RUN apt-get -y update && apt-get -y upgrade && \
    apt-get install -y \

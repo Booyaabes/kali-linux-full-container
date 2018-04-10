@@ -1,8 +1,10 @@
 # kali-linux-full image
 
-Kali image with kali-linux-full metapackage installed
+## Description
 
-# docker alias examples
+Kali image with kali-linux-full metapackage installed.
+
+## Docker alias examples
 
 ``` shell
 alias amap='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full amap'
@@ -15,7 +17,7 @@ alias dnsmap='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-
 alias dnsrecon='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full dnsrecon'
 alias dnswalk='docker run -it --rm booyaabes/kali-linux-full dnswalk'
 alias hping3='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full hping3'
-alias kali-sh='docker run -it --rm --net=host --privileged booyaabes/kali-linux-full /bin/bash'
+alias kali-sh='docker run -it --rm --net=host --privileged -e DISPLAY -v $HOME/.Xauthority:/root/.Xauthority booyaabes/kali-linux-full /bin/bash'
 alias msfconsole='docker run -it --rm --net=host  -v ~/.msf4:/root/.msf4 -v /tmp/msf:/tmp/data booyaabes/kali-linux-full msfconsole'
 alias msfvenom='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full msfvenom'
 alias ndiff='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full ndiff'
