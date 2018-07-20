@@ -23,7 +23,7 @@ alias msfvenom='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linu
 alias ndiff='docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full ndiff'
 alias netdiscover='docker run -it --rm --net=host -w /data -v $(pwd):/data booyaabes/kali-linux-full netdiscover'
 alias nikto='docker run -it --rm --net=host -w /data -v $(pwd):/data booyaabes/kali-linux-full nikto'
-alias nmap='docker run --rm --net=host booyaabes/kali-linux-full nmap'
+alias nmap='docker run --rm --net=host --privileged booyaabes/kali-linux-full nmap'
 alias padbuster='docker run -it --rm booyaabes/kali-linux-full padbuster'
 alias reaver='docker run -it --rm --net=host --privileged -w /data -v $(pwd):/data booyaabes/kali-linux-full reaver'
 alias responder='docker run -it --rm --net=host booyaabes/kali-linux-full responder'
