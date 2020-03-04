@@ -3,7 +3,7 @@ FROM kalilinux/kali-rolling
 LABEL maintainer="Booyaabes"
 
 RUN apt-get -y update && apt-get -y upgrade && \
-   apt-get install -y \
+   DEBIAN_FRONTEND=noninteractive apt-get install -y \
    kali-linux-full \
    pciutils \
    bash-completion && \
