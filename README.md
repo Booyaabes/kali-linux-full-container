@@ -1,3 +1,5 @@
+[![ci](https://github.com/Booyaabes/kali-linux-full-container/actions/workflows/github-actions.yml/badge.svg)](https://github.com/Booyaabes/kali-linux-full-container/actions/workflows/github-actions.yml)
+
 # kali-linux-full image
 
 ## Description
