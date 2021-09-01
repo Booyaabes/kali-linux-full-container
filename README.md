@@ -4,7 +4,13 @@
 
 ## Description
 
-Kali image with kali-linux-full metapackage installed.
+Kali image with kali-linux-full metapackage installed, build every night, available at [Docker Hub](https://hub.docker.com/r/booyaabes/kali-linux-full).
+
+You can pull it with the following command:
+
+```bash
+docker pull booyaabes/kali-linux-full
+```
 
 ## Setup for MacOS
 
