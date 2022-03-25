@@ -6,7 +6,7 @@ on:
     - cron: '30 3 * * *'
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -27,18 +27,24 @@ jobs:
         with:
           platforms: linux/amd64
           push: true
-          tags: booyaabes/kali-linux-full:latest
+          tags: booyaabes/kali-linux-full:amd64
       - name: Build and push arm v7
         id: docker_build_arm_v7
         uses: docker/build-push-action@v2
         with:
           platforms: linux/arm/v7
           push: true
-          tags: booyaabes/kali-linux-full:latest
+          tags: booyaabes/kali-linux-full:armv7
       - name: Build and push arm64
         id: docker_build_arm64
         uses: docker/build-push-action@v2
         with:
           platforms: linux/arm64
           push: true
-          tags: booyaabes/kali-linux-full:latest
+          tags: booyaabes/kali-linux-full:arm64
+      - name: Create multiarch manifest
+        id: docker_create_manifest
+        run: docker manifest create booyaabes/kali-linux-full:latest --amend booyaabes/kali-linux-full:arm64 --amend booyaabes/kali-linux-full:armv7 --amend booyaabes/kali-linux-full:amd64
+      - name: Push multiarch manifest
+        id: docker_push_manifest
+        run: docker manifest push booyaabes/kali-linux-full:latest
