@@ -23,6 +23,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: booyaabes/kali-linux-full:amd64
+          provenance: false
 
   build-arm64:
     runs-on: ubuntu-latest
@@ -46,6 +47,7 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: booyaabes/kali-linux-full:arm64
+          provenance: false
 
   build-armv7:
     runs-on: ubuntu-latest
@@ -69,6 +71,7 @@ jobs:
           platforms: linux/arm/v7
           push: true
           tags: booyaabes/kali-linux-full:armv7
+          provenance: false
 
   manifest:
     needs: [build-amd64, build-arm64, build-armv7]
