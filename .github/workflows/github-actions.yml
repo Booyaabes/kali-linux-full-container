@@ -27,6 +27,7 @@ jobs:
 
   build-arm64:
     runs-on: ubuntu-latest
+    needs: [build-amd64]
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -51,6 +52,7 @@ jobs:
 
   build-armv7:
     runs-on: ubuntu-latest
+    needs: [build-arm64]
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
